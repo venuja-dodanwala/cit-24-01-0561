@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <title>Portfolio - Venuja</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
+</head>
+<body class="overflow-x-hidden font-Outfit leading-8 dark:bg-darkTheme dark:text-white">
+
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]
+    dark:hidden">
+        <img src="./images/header-bg-color.png" alt="" class="w-full">
+    </div>
+
+    <Nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex
+    items-center justify-between z-50">
+
+        <img src="./images/logo.png" alt="Logo"
+        class="w-28 cursor-pointer mr-14 dark:hidden">
+
+        <img src="./images/logo_dark.png" alt="Logo"
+        class="w-28 cursor-pointer mr-14 hidden dark:block">
+
+        <ul class="hidden md:flex items-center gap-6 lg:gap-8 
+        rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo
+        dark:border dark:border-white/50 dark:bg-transparent">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#work">My Work</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+
+        <div class="flex items-center gap-4">
+        <button onclick="toggleTheme()">
+            <img src="./images/moon_icon.png" alt="" class="w-6 dark:hidden">
+            <img src="./images/sun_icon.png" alt="" class="w-6 hidden dark:block">
+        </button>
+
+        <a href="#contact"
+        class="hidden lg:flex items-center gap-3 px-10 py-2.5 border
+        border-gray-500 rounded-full ml-4 font-Ovo dark:border-white/50">
+        Contact
+        <img src="./images/arrow-icon.png" alt="" class="w-3 dark:hidden">
+        <img src="./images/arrow-icon-dark.png" alt="" class="w-3 hidden dark:block">
+    </a>
+        
+        <button class="block md:hidden ml-3" onclick="openMenu()">
+            <img src="./images/menu-black.png" alt="" class="w-6 dark:hidden">
+            <img src="./images/menu-white.png" alt="" class="w-6 hidden dark:block">
+        </button>
+
+        </div>
+<!-- -------- mobile menu------------- -->
+        <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64
+        top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition
+        duration-500 font-Ovo dark:bg-darkHover dark:text-white">
+
+            <div class="absolute right-6 top-6" onclick="closeMenu()">
+                <img src="./images/close-black.png" alt="" class="w-5
+                cursor-pointer dark:hidden">
+
+                <img src="./images/close-white.png" alt="" class="w-5
+                cursor-pointer hidden dark:block">
+            </div>
+
+            <li><a href="#top" onclick="closeMenu()">Home</a></li>
+            <li><a href="#about" onclick="closeMenu()">About Me</a></li>
+            <li><a href="#services" onclick="closeMenu()">Services</a></li>
+            <li><a href="#work" onclick="closeMenu()">My Work</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact Me</a></li>
+        </ul>
+
+</Nav>
+
+<!-- ----------------header-------------- -->
+
+<div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col
+items-center justify-center gap-2">
+    <img src="./images/profile-img.png" alt="" class="rounded-full w-32">
+    <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">Hi! I'm VENUJA DODANWALA<img src="./images/hand-icon.png" alt="" class="w-6"></h3>
+    <h1 class="text-3xl sm:text-6xl lg:text-[55px] font-Ovo">Undergraduate<br>Bsc(Hons) in Software Engineering<br>SLTC Research University</h1>
+    <p class="max-w-4xl mx-auto font-Ovo">I am currently pursuing my studies as an undergraduate at SLTC Research University, where I am honing my skills and knowledge to become a proficient professional in the creative field. With a passion for design and technology, I specialize in web design, graphic design, and photo editing, offering tailored services that cater to both digital and visual needs. As I continue my academic journey, I strive to merge creativity with functionality, ensuring that my work not only meets but exceeds client expectations.</p>
+
+    <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+        <a href="#contact"
+        class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6]
+        to-[#da7d20] text-white flex items-center gap-2 dark:border-transparent">Contact Me <img src="./images/right-arrow-white.png" alt=""
+        class="w-4"></a>
+
+        <a href="./images/CV.pdf" download
+        class="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black">My CV<img src="./images/download-icon.png" alt=""
+        class="w-4"></a>
+    </div>
+</div>
+
+<!-- ---------------- about me---------------- -->
+<div id="about" class="w-full px-[12%] py-10 scroll-mt-20">
+    <h4 class="text-center mb-2 text-lg font-Ovo">Introduction</h4>
+    <h2 class="text-center text-5xl font-Ovo">About Me</h2>
+
+    <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
+        <div class="max-w-max mx-auto relative">
+            <img src="./images/user-image.png" alt="" class="w-64 sm:w-80
+            rounded-3xl max-w-none">
+
+            <!-- <div class="bg-white w-1/2 aspect-square absolute right-0
+            bottom-0 rounded-full translate-x-1/4 translate-y-1/3
+            shadow-[0_4px_55px_rgba(149,0,162,0.15)] flex items-center
+            justify-center">
+                <img src="./images/circular-text.png" alt="" class="w-full animate-spin_slow">
+                <img src="./images/dev-icon.png" alt="" class="w-1/4 absolute top-1/2
+                left-1/2 -translate-x-1/2 -translate-y-1/2">
+            </div> -->
+        </div>
+        <div class="flex-1">
+            
+
+            <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+                <li class="border-[0.5px] border-gray-400 rounded-xl p-6
+                cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500
+                hover:shadow-black
+                dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50
+                ">
+                    <img src="./images/photography.png" alt="" class="w-11 mt-1 dark:hidden">
+                    <img src="./images/photography.dark .png" alt="" class="w-11 mt-0 hidden dark:block">
+
+                    <h3 class="my-3 font-semibold text-gray-700 dark:text-white">Personal details</h3>
+                    <p class="text-gray-600 text-sm dark:text-white/80">I live in Kandy and completed my studies at Sri Chandananda Buddhist College, Kandy. Currently, I am pursuing my undergraduate studies at SLTC Research University, where I am expanding my knowledge and skills in the field of design and technology. My academic journey is helping me grow both creatively and professionally  </p>
+                    
+                </li>
+                <li class="border-[0.5px] border-gray-400 rounded-xl p-6
+                cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500
+                hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
+
+                    <img src="./images/edu-icon.png" alt="" class="w-7 mt-3 dark:hidden">
+                    <img src="./images/edu-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
+
+                    <h3 class="my-5 font-semibold text-gray-700 dark:text-white">Education</h3>
+                    <p class="text-gray-600 text-sm dark:text-white/80">Undergraduate Bsc(Hons) in Software Engineer</p>
+                </li>
+                <li class="border-[0.5px] border-gray-400 rounded-xl p-6
+                cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500
+                hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
+
+                <img src="./images/code-icon.png" alt="" class="w-7 mt-3 dark:hidden">
+                <img src="./images/code-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
+                
+                <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Languages</h3>
+                <p class="text-gray-600 text-sm dark:text-white/80">Python,HTML,CSS</p>
+                </li>
+            </ul>
+            <h4 class="my-6 text-gray-700 font-Ovo dark:text-white/80">Tools I Use</h4>
+
+            <ul class="flex items-center gap-3 sm:gap-5">
+                <li class="flex items-center justify-center w-12 sm:w-14
+                aspect-square border border-gray-400 rounded-lg cursor-pointer
+                hover:-translate-y-1 duration-500">
+                    <img src="./images/photoshop.png" alt="" class="w-5 sm:w-10">
+                </li>
+                <li class="flex items-center justify-center w-12 sm:w-14
+                aspect-square border border-gray-400 rounded-lg cursor-pointer
+                hover:-translate-y-1 duration-500">
+                    <img src="./images/lightroom.png" alt="" class="w-5 sm:w-12">
+                </li>
+                <li class="flex items-center justify-center w-12 sm:w-14
+                aspect-square border border-gray-400 rounded-lg cursor-pointer
+                hover:-translate-y-1 duration-500">
+                    <img src="./images/permier pro.png" alt="" class="w-5 sm:w-12">
+                </li>
+                <li class="flex items-center justify-center w-12 sm:w-14
+                aspect-square border border-gray-400 rounded-lg cursor-pointer
+                hover:-translate-y-1 duration-500">
+                    <img src="./images/capcut.png" alt="" class="w-5 sm:w-12">
+                </li>
+                <li class="flex items-center justify-center w-12 sm:w-14
+                aspect-square border border-gray-400 rounded-lg cursor-pointer
+                hover:-translate-y-1 duration-500">
+                    <img src="./images/vscode.png" alt="" class="w-5 sm:w-8">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- --------------- services------------- -->
+<div id="services" class="w-full px-[12%] py-10 scroll-mt-20">
+    <h4 class="text-center mb-2 text-lg font-Ovo">What I Offer</h4>
+    <h2 class="text-center text-5xl font-Ovo">My Services</h2>
+    <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">I offer a range of creative services, specializing in web design, graphic design, and photo editing to help clients build a strong visual presence. In web design, I create custom websites that are both visually appealing and highly functional, ensuring a smooth user experience. My graphic design services cover everything from branding and marketing materials to social media visuals, focusing on clear, impactful design that communicates effectively. Additionally, with photo editing, I enhance images to bring out their best qualities through color correction, retouching, and creative adjustments. Together, these services provide a cohesive and professional approach to any visual project </p>
+
+    <div class="grid grid-cols-auto gap-6 my-10">
+        <div class="border border-gray-400 rounded-lg px-8 py-12
+        hover:shadow-black cursor-pointer hover:bglightHover
+        hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+            <img src="./images/photography-icon.png" alt="" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 dark:text-white">Web Designing</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white/80">In web designing, I specialize in creating visually appealing, user-centered websites that blend aesthetics with functionality. My approach focuses on crafting responsive and intuitive designs that adapt seamlessly across devices, ensuring a positive user experience. I emphasize clean layouts, clear navigation, and cohesive branding that aligns with each client’s vision and goals. By leveraging the latest design trends and technologies, I help businesses establish a strong online presence that engages visitors and communicates their brand effectively.</p>
+            <a href="" class="flex items-center gap-2 text-sm mt-5">Read More <img src="./images/right-arrow.png" alt=""
+                class="w-4"></a>
+        </div>
+        <div class="border border-gray-400 rounded-lg px-8 py-12
+        hover:shadow-black cursor-pointer hover:bglightHover
+        hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+            <img src="./images/video-icon.png" alt="" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 dark:text-white">Graphic Designing</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white/80">In my graphic design services, I focus on transforming ideas into visually compelling designs that capture attention and communicate effectively. Whether it’s brand identity, marketing materials, social media graphics, or digital and print collateral, I work to create designs that align with my clients' goals and resonate with their target audience. With expertise in typography, color theory, and layout design, I ensure every project not only looks polished but also enhances brand recognition and engagement. My approach combines creativity with strategic design to deliver graphics that are both memorable and meaningful.</p>
+            <a href="" class="flex items-center gap-2 text-sm mt-5">Read More <img src="./images/right-arrow.png" alt=""
+            class="w-4"></a>
+        </div>
+        <div class="border border-gray-400 rounded-lg px-8 py-12
+        hover:shadow-black cursor-pointer hover:bglightHover
+        hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+            <img src="./images/web-icon.png" alt="" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 dark:text-white">Photo Editing</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white/80">My photo editing services are designed to bring out the best in every image, whether for personal, professional, or commercial use. I specialize in enhancing photos through color correction, retouching, background adjustments, and detail enhancement, ensuring each image is polished and visually compelling. By focusing on clarity, composition, and a style that suits your brand or personal taste, I help transform raw images into captivating visuals that make a lasting impression. From subtle adjustments to creative transformations, my goal is to elevate your photos to meet the highest standards of quality and artistry.</p>
+            <a href="" class="flex items-center gap-2 text-sm mt-5">Read More <img src="./images/right-arrow.png" alt=""
+            class="w-4"></a>
+        </div>
+        <div class="border border-gray-400 rounded-lg px-8 py-12
+        hover:shadow-black cursor-pointer hover:bglightHover
+        hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+            <img src="./images/graphics-icon.png" alt="" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 dark:text-white">UI Designing</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white/80">UI design, or User Interface design, focuses on creating intuitive, visually engaging, and functional interfaces for websites, mobile apps, and software. The goal is to ensure users can interact with the product seamlessly and effectively. As a UI designer, I focus on the layout, navigation, and overall aesthetics of a digital interface, ensuring that it not only looks great but also provides an easy-to-use experience. By combining design principles with a user-centered approach, I create interfaces that are both visually appealing and practical, enhancing the overall user experience.</p>
+            <a href="" class="flex items-center gap-2 text-sm mt-5">Read More <img src="./images/right-arrow.png" alt=""
+            class="w-4"></a>
+        </div>
+    </div>
+</div>
+<!-- ---------- my work------------- -->
+
+<div id="work" class="w-full px-[12%] py-10 scroll-mt-20">
+    <h4 class="text-center mb-2 text-lg font-Ovo">My Portfolio</h4>
+    <h2 class="text-center text-5xl font-Ovo">My Work</h2>
+    <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">I work as a versatile creative professional specializing in web design, photo editing, and photography. In web design, I focus on crafting visually engaging and user-friendly sites that align with brand identity and provide an intuitive user experience. My photo editing skills enable me to bring out the best in images, enhancing colors, adjusting lighting, and refining details to ensure that each shot tells a compelling story. As a photographer, I capture moments with a keen eye for composition, lighting, and emotion, whether it’s event photography, portraiture, or scenic landscapes. My combined skills allow me to offer clients cohesive, polished visuals across digital and print media.</p>
+
+    <div class="grid grid-cols-auto my-10 gap-5 dark:text-black">
+        <div class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat
+        bg-cover bg-center rounded-lg relative cursor-pointer group">
+
+            <div class="bg-white w-10/12 rounded-md absolute bottom-5
+            left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between
+            duration-500 group-hover:bottom-7">
+                <div>
+                    <h2 class="font-semibold">llustration for Graphic Design</h2>
+                    <p class="text-sm text-gray-700">Graphic Designing</p>
+                </div>
+                <div class="border rounded-full border-black w-9 aspect-square
+                flex items-center justify-center shadow-[2px_2px_0_#000]
+                group-hover:bg-lime-300 transition">
+                    <img src="./images/send-icon.png" alt="" class="w-5">
+                </div>
+            </div>
+
+        </div>
+        <div class="aspect-square bg-[url('./images/work-2.png')] bg-no-repeat
+        bg-cover bg-center rounded-lg relative cursor-pointer group">
+
+            <div class="bg-white w-10/12 rounded-md absolute bottom-5
+            left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between
+            duration-500 group-hover:bottom-7">
+                <div>
+                    <h2 class="font-semibold">Personal Website Design</h2>
+                    <p class="text-sm text-gray-700">Web Designing</p>
+                </div>
+                <div class="border rounded-full border-black w-9 aspect-square
+                flex items-center justify-center shadow-[2px_2px_0_#000]
+                group-hover:bg-lime-300 transition">
+                    <img src="./images/send-icon.png" alt="" class="w-5">
+                </div>
+            </div>
+
+        </div>
+        <div class="aspect-square bg-[url('./images/work-3.png')] bg-no-repeat
+        bg-cover bg-center rounded-lg relative cursor-pointer group">
+
+            <div class="bg-white w-10/12 rounded-md absolute bottom-5
+            left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between
+            duration-500 group-hover:bottom-7">
+                <div>
+                    <h2 class="font-semibold">Packaging Design</h2>
+                    <p class="text-sm text-gray-700">Graphic Designing</p>
+                </div>
+                <div class="border rounded-full border-black w-9 aspect-square
+                flex items-center justify-center shadow-[2px_2px_0_#000]
+                group-hover:bg-lime-300 transition">
+                    <img src="./images/send-icon.png" alt="" class="w-5">
+                </div>
+            </div>
+
+        </div>
+        <div class="aspect-square bg-[url('./images/work-4.png')] bg-no-repeat
+        bg-cover bg-center rounded-lg relative cursor-pointer group">
+
+            <div class="bg-white w-10/12 rounded-md absolute bottom-5
+            left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between
+            duration-500 group-hover:bottom-7">
+                <div>
+                    <h2 class="font-semibold">Event Photography</h2>
+                    <p class="text-sm text-gray-700">Photo Editing</p>
+                </div>
+                <div class="border rounded-full border-black w-9 aspect-square
+                flex items-center justify-center shadow-[2px_2px_0_#000]
+                group-hover:bg-lime-300 transition">
+                    <img src="./images/send-icon.png" alt="" class="w-5">
+                </div>
+            </div>
+        </div>    
+    </div>
+    <a href="#" class="w-max flex items-center justify-center gap-2
+    text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3
+    px-10 mx-auto my-20 hover:bg-lightHover duration-500
+    dark:text-white dark:border-white dark:hover:bg-darkHover">Show More
+
+    <img src="./images/right-arrow-bold.png" alt="" class="w-4 dark:hidden">
+    <img src="./images/right-arrow-bold-dark.png" alt="" class="w-4 hidden
+    dark:block">
+    </a>
+
+    
+</div>
+<!-- ------------contact------------ -->
+<div id="contact" class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('./images/footer-bg-color.png')] bg-no-repeat
+bg-[length:90%_auto] bg-center dark:bg-none">
+    <h4 class="text-center mb-2 text-lg font-Ovo">Connect with me</h4>
+    <h2 class="text-center text-5xl font-Ovo">Get in touch</h2>
+    <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">Enter your details to connect with me.</p>
+
+    <form method="post" action="https://api.web3forms.com/submit" class="max-w-2xl mx-auto">
+        
+        <input type="hidden" name="access_key" value="">
+
+
+        <div class="grid grid-cols-auto gap-6 mt-10 mb-8">
+            <input type="text" placeholder="Enter Your Name" class="flex-1
+            p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white
+            dark:bg-darkHover/30 dark:border-white/90"  required name="name">
+
+            <input type="email" placeholder="Enter Your Email" class="flex-1
+            p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white
+            dark:bg-darkHover/30 dark:border-white/90" required name="email">
+            
+        </div>
+        <textarea rows="6" placeholder="Enter Your Message" class="w-full p-4
+        outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6
+        dark:bg-darkHover/30 dark:border-white/90" required name="message"></textarea>
+
+        <button class="py-3 px-8 w-max flex items-center justify-between gap-2
+        bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500
+        dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover">Submit Now
+            <img src="./images/right-arrow-white.png" alt="" class="w-4">
+        </button>
+    </form>
+</div>
+<!-- --------------footer------------ -->
+<div class="mt-20">
+    <div class="text-center">
+        <img src="./images/logo.png" alt="" class="w-36 mx-auto mb-2 dark:hidden">
+        <img src="./images/logo_dark.png" alt="" class="w-36 mx-auto mb-2 hidden dark:block">
+
+        <div class="w-max flex items-center gap-2 mx-auto">
+            <img src="./images/mail_icon.png" alt="" class="w-6 dark:hidden">
+            <img src="./images/mail_icon_dark.png" alt="" class="w-6 hidden dark:block">
+
+            venuja.s.ddodanwala@gmail.com
+        </div>
+    </div>
+    <div class="text-center sm:flex items-center justify-between border-t
+    border-gray-400 mx-[10%] mt-12 py-6">
+        <p>© 2024 Venuja Dodanwala. All rights reserved.</p>
+        <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+            <li><a href="https://www.facebook.com/">Faccebook</a></li>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
+            <li><a href="https://l.facebook.com/">LinkedIn</a></li>
+            <li><a href="https://l.instagram.com/">Tiktok</a></li>
+        </ul>
+    </div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
